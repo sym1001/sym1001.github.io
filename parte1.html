@@ -17,18 +17,26 @@
             color: #fff;
             height: 100vh;
             text-align: center;
+            padding: 20px; /* Añadido padding */
         }
 
         h1 {
             margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 2.5em; /* Aumento del tamaño de fuente */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+        }
+
+        p {
+            font-size: 1.2em; /* Aumento del tamaño de fuente para el párrafo */
+            margin-bottom: 20px; /* Añadido margen inferior para separación */
+            line-height: 1.4; /* Mejora la altura de línea para mayor legibilidad */
         }
 
         .collage {
             display: grid;
-            grid-template-columns: repeat(2, 200px); /* 2 columnas */
-            grid-template-rows: repeat(2, 200px); /* 2 filas */
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Acomoda automáticamente las imágenes */
+            grid-gap: 10px; /* Espacio entre las imágenes */
+            margin-bottom: 20px; /* Margen inferior para separación */
         }
 
         .collage img {
@@ -36,6 +44,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para las imágenes */
         }
 
         .back-link {
@@ -43,6 +52,7 @@
             color: #ffb3ff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.2em; /* Tamaño de fuente aumentado para el enlace */
         }
         
         .back-link:hover {
@@ -57,14 +67,14 @@
 
     <!-- Collage de Imágenes -->
     <div class="collage">
-        <img src="ari1.jpg">
-        <img src="ari2.jpg">
-        <img src="ari3.jpg">
-        <img src="ari4.jpg">
+        <img src="ari1.jpg" alt="Foto de Ari 1">
+        <img src="ari2.jpg" alt="Foto de Ari 2">
+        <img src="ari3.jpg" alt="Foto de Ari 3">
+        <img src="ari4.jpg" alt="Foto de Ari 4">
     </div>
 
     <!-- Enlace para regresar a la página principal -->
-    <a href="index.html" class="">Regresar a la Página Principal</a>
+    <a href="index.html" class="back-link">Regresar a la Página Principal</a>
 
 </body>
 </html>
