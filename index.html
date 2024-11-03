@@ -15,8 +15,9 @@
             justify-content: center;
             background: linear-gradient(to right, #ff758c, #ff7eb3);
             color: #fff;
-            min-height: 100vh; /* Cambiado a min-height para asegurar que el cuerpo ocupe toda la pantalla */
+            min-height: 100vh; /* Asegura que el cuerpo ocupe toda la pantalla */
             text-align: center;
+            padding: 20px; /* Añadido padding para el contenido */
         }
 
         h1 {
@@ -27,7 +28,7 @@
         .message {
             font-size: 1.2em;
             margin: 20px;
-            max-width: 90%; /* Cambiado a 90% para adaptarse mejor a pantallas pequeñas */
+            max-width: 100%; /* Permite que el mensaje ocupe el ancho disponible */
             padding: 20px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
@@ -41,10 +42,12 @@
             gap: 15px;
             flex-wrap: wrap;
             margin-top: 20px;
+            width: 100%; /* Asegura que la galería ocupe todo el ancho disponible */
+            max-width: 600px; /* Limita el ancho máximo de la galería */
         }
 
         .gallery .part {
-            width: calc(33.33% - 10px); /* Ajusta el ancho para pantallas más grandes, se reduce en pantallas pequeñas */
+            flex: 1 1 calc(30% - 10px); /* Ajuste flexible para la galería */
             height: 100px;
             display: flex;
             align-items: center;
@@ -56,6 +59,7 @@
             cursor: pointer;
             transition: transform 0.3s;
             text-decoration: none;
+            margin-bottom: 10px; /* Añadido margen inferior para separación */
         }
 
         .gallery .part:hover {
@@ -67,13 +71,13 @@
         /* Estilos responsivos */
         @media (max-width: 768px) {
             .gallery .part {
-                width: calc(50% - 10px); /* Dos partes por fila en pantallas medianas */
+                flex: 1 1 calc(45% - 10px); /* Dos partes por fila en pantallas medianas */
             }
         }
 
         @media (max-width: 480px) {
             .gallery .part {
-                width: 100%; /* Una parte por fila en pantallas pequeñas */
+                flex: 1 1 100%; /* Una parte por fila en pantallas pequeñas */
             }
             h1 {
                 font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
