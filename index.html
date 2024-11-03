@@ -15,40 +15,40 @@
             justify-content: center;
             background: linear-gradient(to right, #ff758c, #ff7eb3);
             color: #fff;
-            min-height: 100vh; /* Asegura que el cuerpo ocupe toda la pantalla */
+            min-height: 100vh;
             text-align: center;
-            padding: 20px; /* Añadido padding para el contenido */
+            padding: 10px; /* Reducción de padding */
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2em; /* Tamaño de fuente reducido */
+            margin-bottom: 5px; /* Margen reducido */
         }
 
         .message {
-            font-size: 1.2em;
-            margin: 20px;
+            font-size: 1em; /* Tamaño de fuente reducido */
+            margin: 10px; /* Margen reducido */
             max-width: 100%; /* Permite que el mensaje ocupe el ancho disponible */
-            padding: 20px;
+            padding: 15px; /* Reducción de padding */
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
-            line-height: 1.6;
-            overflow-wrap: break-word; /* Asegura que el texto largo se divida adecuadamente */
+            line-height: 1.4; /* Reducción de la altura de línea */
+            overflow-wrap: break-word;
         }
 
         .gallery {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px; /* Espaciado reducido */
             flex-wrap: wrap;
-            margin-top: 20px;
-            width: 100%; /* Asegura que la galería ocupe todo el ancho disponible */
+            margin-top: 10px; /* Margen superior reducido */
+            width: 100%;
             max-width: 600px; /* Limita el ancho máximo de la galería */
         }
 
         .gallery .part {
-            flex: 1 1 calc(30% - 10px); /* Ajuste flexible para la galería */
-            height: 100px;
+            flex: 1 1 calc(30% - 8px); /* Ajuste flexible para la galería */
+            height: 80px; /* Altura reducida */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -59,11 +59,11 @@
             cursor: pointer;
             transition: transform 0.3s;
             text-decoration: none;
-            margin-bottom: 10px; /* Añadido margen inferior para separación */
+            margin-bottom: 5px; /* Margen inferior reducido */
         }
 
         .gallery .part:hover {
-            transform: scale(1.1);
+            transform: scale(1.05); /* Reducción del efecto hover */
             background-color: #ff7eb3;
             color: #fff;
         }
@@ -71,7 +71,7 @@
         /* Estilos responsivos */
         @media (max-width: 768px) {
             .gallery .part {
-                flex: 1 1 calc(45% - 10px); /* Dos partes por fila en pantallas medianas */
+                flex: 1 1 calc(45% - 8px); /* Dos partes por fila en pantallas medianas */
             }
         }
 
@@ -80,7 +80,7 @@
                 flex: 1 1 100%; /* Una parte por fila en pantallas pequeñas */
             }
             h1 {
-                font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+                font-size: 1.8em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
             }
         }
     </style>
