@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Ti</title>
     <style>
-                body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
             justify-content: center;
             background: linear-gradient(to right, #ff758c, #ff7eb3);
             color: #fff;
-            height: 100vh;
+            min-height: 100vh; /* Cambiado a min-height para asegurar que el cuerpo ocupe toda la pantalla */
             text-align: center;
         }
 
@@ -27,11 +27,12 @@
         .message {
             font-size: 1.2em;
             margin: 20px;
-            max-width: 600px;
+            max-width: 90%; /* Cambiado a 90% para adaptarse mejor a pantallas pequeñas */
             padding: 20px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             line-height: 1.6;
+            overflow-wrap: break-word; /* Asegura que el texto largo se divida adecuadamente */
         }
 
         .gallery {
@@ -43,7 +44,7 @@
         }
 
         .gallery .part {
-            width: 100px;
+            width: calc(33.33% - 10px); /* Ajusta el ancho para pantallas más grandes, se reduce en pantallas pequeñas */
             height: 100px;
             display: flex;
             align-items: center;
@@ -62,16 +63,30 @@
             background-color: #ff7eb3;
             color: #fff;
         }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .gallery .part {
+                width: calc(50% - 10px); /* Dos partes por fila en pantallas medianas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery .part {
+                width: 100%; /* Una parte por fila en pantallas pequeñas */
+            }
+            h1 {
+                font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+            }
+        }
     </style>
 </head>
 <body>
-
-
     <h1>Lo siento mucho</h1>
     <div class="message">
-        <p>Hola Ari te preguntaras quesesto</p>
-        <p> ya me siento mejor y realmente no tengo idea de como volver a hablarte y como aprovechando que tengo conocimientos hice esto hasta cierto punto siento que estas enojada todavia y no quiero que te sientas asi no mas pq no te quise contar el motivo por el cual me sentia asi, tu no tienes la culpa de nada y entiendo que puedes llegar a querer saber que me afectaba y al no quererte contar no se que pudiste llegar a pensar que no te tengo confianza o algo por el estilo pero trato de comprender tu situacion se que no hago bien en guardarme lo que siento o lo que  me afecta pero en realidad no se expresarme me cuesta mucho expresar mis sentimientos o emociones lo que me afecta o lo que me daña no se desaogarme en si siento que molesto a la gente o q no tengo porque sentirme mal y por eso suelo alejarme me duele mucho algunas cosas, soy una persona insegura hasta cierto punto en muchos aspectos pero trato de fingir que soy fuerte porque quiero que estes bien, llevaba mucho tiempo sintiendome mal y no queria afectarte pero por algunas situaciones que vivi en las ultimas semanas tenia una actitud muy grosera e irritable y medio triste y no queria que esas actitudes te llegaran a ti por eso te dije lo que te dije en su momento te amo y no quiero que como me sienta te afecta a ti si es en mal sentido  </p>
-        <p>En si eso seria todo pero como ya empeze a hacer esto queria hacer otras cosas aprovenchando asi que checa las otras partes de abajo :3</p>
+        <p>Hola Ari, te preguntarás qué es esto.</p>
+        <p>Ya me siento mejor y realmente no tengo idea de cómo volver a hablarte. Aprovechando que tengo conocimientos, hice esto. Hasta cierto punto, siento que estás enojada todavía y no quiero que te sientas así, no más porque no te quise contar el motivo por el cual me sentía así. Tú no tienes la culpa de nada y entiendo que puedes llegar a querer saber qué me afectaba. Al no quererte contar, no sé qué pudiste llegar a pensar, que no te tengo confianza o algo por el estilo. Pero trato de comprender tu situación. Sé que no hago bien en guardarme lo que siento o lo que me afecta, pero en realidad no sé expresarme. Me cuesta mucho expresar mis sentimientos o emociones, lo que me afecta o lo que me daña. No sé desahogarme. Siento que molesto a la gente o que no tengo por qué sentirme mal, y por eso suelo alejarme. Me duele mucho algunas cosas. Soy una persona insegura hasta cierto punto en muchos aspectos, pero trato de fingir que soy fuerte porque quiero que estés bien. Llevaba mucho tiempo sintiéndome mal y no quería afectarte. Pero por algunas situaciones que viví en las últimas semanas, tenía una actitud muy grosera, irritable y un poco triste, y no quería que esas actitudes te llegaran a ti. Por eso te dije lo que te dije en su momento. Te amo y no quiero que, como me sienta, te afecte a ti si es en mal sentido.</p>
+        <p>En sí eso sería todo, pero como ya empecé a hacer esto quería hacer otras cosas, así que checa las otras partes de abajo :3</p>
     </div>
 
     <!-- Galería de Partes -->
@@ -80,6 +95,5 @@
         <a href="parte2.html" class="part">Parte 2</a>
         <a href="parte3.html" class="part">Parte 3</a>
     </div>
-
 </body>
 </html>
